@@ -1,3 +1,4 @@
+//@import './variables.module.scss';
 .App {
   text-align: center;
 }
@@ -25,7 +26,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #f361fb;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +36,41 @@
   to {
     transform: rotate(360deg);
   }
+}
+ul.no-bullets {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
+}
+
+.accountsList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px 0;
+  border-top: 1px solid #9459a0;
+  border-bottom: 1px solid  #9459a0;
+}
+
+.fieldset {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.fieldset-input {
+  background-color: #e1abe8;
+  border-radius: 30px;
+  border: none;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bolder;
+  padding: 10px;
+  max-width: 120px;
+}
+
+.fieldset-buttons {
+  display: flex;
+  flex-direction: column;
 }

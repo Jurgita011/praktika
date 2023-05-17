@@ -1,0 +1,69 @@
+
+.button {
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    display: inline - block;
+    background: linear - gradient(to bottom, #630a77 5%, #9459a0 100%);
+    background-color: #b359b2;
+    border-radius: 30px;
+    border: none;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 10px 25px;
+    margin: 3px;
+    &:hover {
+        background: linear - gradient(to bottom, #630a77 5%,#9459a0 100%);
+        background-color: #400248;
+    }
+    &:active {
+        position: relative;
+        top: 1px;
+    }
+}
+
+.button-del {
+    cursor: pointer;
+    text-decoration: none;
+    color: #8a4099;
+    display: inline - block;
+    background-color: #2a102d;
+    border-radius: 30px;
+    border: 1px solid #8a4099;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 10px 25px;
+    margin: 3px;
+    &:hover {
+        background: linear - gradient(to bottom,  #630a77  5%,#9459a0 100%);
+        background-color: #b359b2;
+        color: white;
+    }
+    &:active {
+        position: relative;
+        top: 1px;
+    }
+}
+
+.button-add {
+    cursor: pointer;
+    text-decoration: none;
+    color:white;
+    display: inline - block;
+    background: linear - gradient(to bottom,  #630a77 5%, #9459a0 100%);
+    background-color: #b359b2;
+    border-radius: 30px;
+    border: none;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 10px 25px;
+    margin: 30px 3px 3px;
+    &:hover {
+        background: linear - gradient(to bottom,   #630a77 5%, #9459a0 100%);
+        background-color: #b359b2;
+    }
+    &:active {
+        position: relative;
+        top: 1px;
+    }
+}
