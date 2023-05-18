@@ -3,16 +3,9 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+
+
 
 .App-header {
   background-color: #282c34;
@@ -25,39 +18,60 @@
   color: white;
 }
 
-.App-link {
-  color: #f361fb;
+h1 {
+  margin: 50px;
+  color: #d8a7e7;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h2 {
+  font-size: 25px;
 }
+
+p {
+  font-size: 20px;
+  padding: 10px 25px;
+  margin: auto;
+}
+
+.card {
+  background-color: #28102d;
+  border-color: #d49cde;
+}
+
+.card-header {
+  border-bottom-color: #deabe8;
+}
+
 ul.no-bullets {
-  list-style-type: none; /* Remove bullets */
-  padding: 0; /* Remove padding */
-  margin: 0; /* Remove margins */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
-.accountsList {
+.accounts-list {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
   padding: 30px 0;
-  border-top: 1px solid #9459a0;
-  border-bottom: 1px solid  #9459a0;
+  flex-direction: column;
 }
-
+.account-name{
+  display: flex;
+  justify-content: space-between;
+}
 .fieldset {
   display: flex;
   align-items: center;
   gap: 10px;
 }
+.fieldset-add-new {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
 
 .fieldset-input {
   background-color: #e1abe8;
@@ -73,4 +87,47 @@ ul.no-bullets {
 .fieldset-buttons {
   display: flex;
   flex-direction: column;
+}
+.modal {
+  display: block;
+  background-color: rgba(86, 29, 82, 0.803);
+
+  .modal-content {
+    background-color: #d5c8db;
+  }
+
+  .modal-title,
+  .modal-body {
+    color: #8a508b;
+  }
+}
+
+.sort {
+  border: 1px solid #f7f3f8;
+  border-radius: 5px;
+  width: 200px;
+  font-size: 15px;
+
+  .sort-button {
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+    cursor: pointer;
+    color: #f7f7f7;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    &:after {
+      content: '\25A2'; // square
+    }
+
+    &.asc::after {
+      content: '\25B3'; // up-pointing triangle
+    }
+
+    &.default::after {
+      content: '\25BD'; // down-pointing triangle
+    }
+  }
 }
