@@ -33,7 +33,7 @@ export default function AddNewAccount({ setCreateData }) {
           setVardas('');
           setLastPavarde('');
         } else {
-          alert('Please fill in the Name and Last name fields. The characters used must be letters.');
+          alert('Prašau iveskite varda ir pavarda. Naudojami simboliai turi būti raides.');
         }
       };
 

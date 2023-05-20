@@ -8,7 +8,7 @@ export default function MoneyBalance({ setEditData, account }) {
         const money = parseFloat(moneyFlow.current.value);
         if (isNaN(money) || money <= 0) {
             setEditData({ ...account, Balance: account.Balance });
-            alert('Please enter the amount. It cannot be negative or zero.');
+            alert('Prasau iveskite suma. Ji negali būti neigiama arba nuline.');
 
         } else {
             const newBalancePlus = account.Balance + money;
@@ -20,14 +20,14 @@ export default function MoneyBalance({ setEditData, account }) {
 
     const minus = _ => {
         const money = parseFloat(moneyFlow.current.value);
-        if (isNaN(money) || money < 0) {
+        if (money===undefined|| money <= 0) {
             setEditData({ ...account, Balance: account.Balance });
-            alert('Please enter the amount. It cannot be negative or zero.');
+            alert('Prasau iveskite suma. Ji negali būti neigiama arba nuline.');
         }
 
         if (money > account.Balance) {
             setEditData({ ...account, Balance: account.Balance });
-            alert('You cannot withdraw more than your balance');
+            alert('Negalite atsiimti daugiau nei jusu likutis');
         }
         else {
             const newBalanceMinus = account.Balance - money;
