@@ -40,7 +40,7 @@ export default function AddNewAccount({ setCreateData }) {
     return (
         <>
             <div className="card">
-                <h2 className="card-header">Naujas sarasaa</h2>
+                <h2 className="card-header">Naujas sarasas</h2>
                 <div className="m-3">
                     <form>
                         <fieldset className="fieldset-add-new">
