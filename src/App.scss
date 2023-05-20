@@ -15,12 +15,12 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #dcd1e1;
 }
 
 h1 {
   margin: 50px;
-  color: #d8a7e7;
+  color: #dcd1e1;
 }
 
 h2 {
@@ -75,13 +75,12 @@ ul.no-bullets {
 
 .fieldset-input {
   background-color: #e1abe8;
-  border-radius: 30px;
+  border-radius: 10px;
   border: none;
   text-align: center;
   font-size: 15px;
-  font-weight: bolder;
   padding: 10px;
-  max-width: 120px;
+  max-width: 100%;
 }
 
 .fieldset-buttons {
@@ -105,8 +104,9 @@ ul.no-bullets {
 .sort {
   border: 1px solid #f7f3f8;
   border-radius: 5px;
-  width: 200px;
+  width:fit-content;
   font-size: 15px;
+  padding: 0 10px;
 
   .sort-button {
     width: 30px;
@@ -114,9 +114,8 @@ ul.no-bullets {
     font-size: 15px;
     cursor: pointer;
     color: #f7f7f7;
-    display: inline-flex;
     align-items: center;
-    justify-content: center;
+   padding-left: 10px;
 
     &:after {
       content: '\25A2'; // square
@@ -131,3 +130,36 @@ ul.no-bullets {
     }
   }
 }
+// .messages {
+//   position: fixed;
+//   top: 40px;
+//   right: 50px;
+//   display: flex;
+//   flex-direction: column;
+//   gap: 5px;
+//   .message {
+//       padding: 15px 30px;
+//       border: 1px solid $gray;
+//       background-color: lighten($gray, 10%);
+//       border-radius: 3px;
+//       font-size: 20px;
+//       &.ok {
+//           border-color: $yellow;
+//           background-color: lighten($yellow, 10%);
+//           color: white;
+//       }
+//       &.info {
+//           border-color: $blue;
+//           background-color: lighten($blue, 10%);
+//           color: white;
+//       }
+//       &.error {
+//           border-color: $red;
+//           background-color: lighten($red, 10%);
+//           color: white;
+//       }
+//   }
+// }
+
+
+

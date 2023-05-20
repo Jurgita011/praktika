@@ -14,39 +14,49 @@ Paaiškinimai ir reikalavimai.
 */
 
 
-import { useState, useRef, useEffect } from "react"
+import { useState,  } from "react"
 
 export default function AddNewAccount({ setCreateData }) {
+    const[vardas,setVardas] = useState('');
+    const[pavarde, setLastPavarde] = useState('');
 
-    const nameRef = useRef(null);
-    const surnameRef = useRef(null);
-
-    const save = _ => {
-
-        const vardas = nameRef.current.value;
-        const pavarde = surnameRef.current.value;
-
-        setCreateData({
-            Vardas: vardas,
+    const save = (event) => {
+        event.preventDefault();
+    
+        if (/^[A-Za-z]+$/.test(vardas) && /^[A-Za-z]+$/.test(pavarde)) {
+          setCreateData({
+           Vardas:vardas,
             Pavarde: pavarde,
-            Balance: 0
-        });
-    };
+            Balance: 0,
+          });
+    
+          setVardas('');
+          setLastPavarde('');
+        } else {
+          alert('Please fill in the Name and Last name fields. The characters used must be letters.');
+        }
+      };
 
     return (
         <>
-            <div className="card m-5">
-                <h2 className="card-header">Nauja saskaita</h2>
+            <div className="card">
+                <h2 className="card-header">Naujas sarasaa</h2>
                 <div className="m-3">
                     <form>
                         <fieldset className="fieldset-add-new">
-                            <input className="fieldset-input" type="text" id="name" ref={nameRef} placeholder="Vardas" required />
-                            <input className="fieldset-input" type="text" id="surname" ref={surnameRef} placeholder="Pavarde" required />
+                            <label htmlFor="vardas" style={{display:'none'}}></label>
+                            <input className="fieldset-input" type="text" id="vardas" placeholder="Vardas" required value={vardas} onChange={e => setVardas(e.target.value)} />
+                            <label htmlFor="pavarde" style={{display:'none'}}></label>
+                            <input value={pavarde} onChange={e => setLastPavarde(e.target.value)} className="fieldset-input" type="text" id="lastPavarde" placeholder="Pavarde" required />
                         </fieldset>
                     </form>
-                    <button className="button-add" onClick={save}>prideti</button>
+                    <button className="button-add" onClick={save}>Prideti</button>
                 </div>
             </div>
         </>
     )
 }
+
+
+
+  
